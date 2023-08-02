@@ -24,17 +24,17 @@ galleryList.insertAdjacentHTML("beforeend", galleryMarkup);
 
 galleryList.addEventListener("click", handlerOnClick);
 
+let lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: "250",
+});
+
 function handlerOnClick(event) {
   event.preventDefault();
 
   if (event.target === event.currentTarget) {
     return;
   }
-
-  const lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: "250",
-  });
 
   lightbox.on("show.simplelightbox", function () {});
 }
