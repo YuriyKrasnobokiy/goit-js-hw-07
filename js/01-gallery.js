@@ -43,6 +43,7 @@ function handlerOnClick(event) {
   instance.show();
 
   galleryList.addEventListener("keydown", (event) => {
+    console.log(event.code);
     if (event.code === "Escape") {
       instance.close();
     }
