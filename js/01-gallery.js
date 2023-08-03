@@ -39,10 +39,10 @@ function handlerOnClick(event) {
   />
   `,
     {
-      onShow: (instance) => {
+      onShow: () => {
         galleryList.addEventListener("keydown", onKeyDown);
       },
-      onClose: (instance) => {
+      onClose: () => {
         galleryList.removeEventListener("keydown", onKeyDown);
       },
     },
@@ -51,7 +51,6 @@ function handlerOnClick(event) {
   instance.show();
 
   function onKeyDown(event) {
-    console.log(event.code);
     if (event.code === "Escape") {
       instance.close();
     }
